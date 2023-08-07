@@ -1,6 +1,5 @@
 #!/bin/bash
 # nMonit Scipt for ASUSWRT BusyBox Router
-# Add the .sh to /var/spool/cron/crontabs/
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 agent_version="6.1"
 POST="$POST{agent_version}$agent_version{/agent_version}"
