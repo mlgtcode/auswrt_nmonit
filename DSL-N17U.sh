@@ -86,8 +86,9 @@ usbinfo=$(cat /tmp/usbinfo | /mnt/sda1/asusware.big/bin/openssl base64)
 POST="$POST{plugin-usbinfo}$usbinfo{/plugin-usbinfo}"
 rping=$(ping -c 5 gttg.space | /mnt/sda1/asusware.big/bin/openssl base64)
 POST="$POST{plugin-rping}$rping{/plugin-rping}"
-tplink=$(ping -c 5 192.168.1.55 | /mnt/sda1/asusware.big/bin/openssl base64)
-POST="$POST{plugin-tplink}$tplink{/plugin-tplink}"
+# Ping edge router
+# tplink=$(ping -c 5 192.168.1.55 | /mnt/sda1/asusware.big/bin/openssl base64)
+# POST="$POST{plugin-tplink}$tplink{/plugin-tplink}"
 wget --no-check-certificate --post-data "data=$POST" http://url.tld/agent.php
 # wget --no-check-certificate --post-data "data=$POST"  https://url.tld/agent.php
 rm agent.php
