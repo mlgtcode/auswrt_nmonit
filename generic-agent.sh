@@ -1,10 +1,10 @@
 #!/bin/bash
-# nMonit Scipt for ASUSWRT BusyBox Router
+# nMonit Scipt for ASUSWRT (BusyBox) Router
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 agent_version="6.1"
 POST="$POST{agent_version}$agent_version{/agent_version}"
-POST="$POST{serverkey}PUT SERVER KEY HERE{/serverkey}"
-POST="$POST{gateway}monitoring.url/agent.php{/gateway}"
+POST="$POST{serverkey}xxxx{/serverkey}"
+POST="$POST{gatewaydomain.tld/agent.php{/gateway}"
 hostname=$(hostname)
 POST="$POST{hostname}$hostname{/hostname}"
 kernel=$(uname -r)
